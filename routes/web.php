@@ -11,6 +11,15 @@
 |
 */
 
+Route::get('posts', ['as' => 'posts.index', 'uses' => 'PostsController@index']);    //可省略
+
+Route::get('post', ['as' => 'posts.show', 'uses' => 'PostsController@show']);
+
+Route::get('about', ['as' => 'posts.about', 'uses' => 'PostsController@about']);
+
+Route::get('contact', ['as' => 'posts.contact', 'uses' => 'PostsController@contact']);
+
+
 Route::get('/', function () {
     return view('welcome');
 });
