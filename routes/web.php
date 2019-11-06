@@ -21,7 +21,7 @@ Route::get('contact', ['as' => 'posts.contact', 'uses' => 'PostsController@conta
 
 
 Route::get('/', function () {
-    
+
     /*
     \App\Post::create([
         'title'=>'test title',
@@ -34,8 +34,12 @@ Route::get('/', function () {
     $post->content = 'test content1';
     $post->save();
     */
+    /*
     $posts = \App\Post::all();
     dd($posts);
+    */
+    $post= \App\Post::find(1);
+    dd($post);
 
     return view('welcome');
 });
