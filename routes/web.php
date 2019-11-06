@@ -63,7 +63,10 @@ Route::get('/', function () {
     $post=\App\Post::find(9);
     $post->delete();
     */
-    \App\Post::destroy(11);
-    
+
+    //\App\Post::destroy(11);
+
+    \App\Post::destroy(7,10,14);
+
     return view('welcome');
 });
