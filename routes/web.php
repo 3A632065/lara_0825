@@ -21,18 +21,21 @@ Route::get('contact', ['as' => 'posts.contact', 'uses' => 'PostsController@conta
 
 
 Route::get('/', function () {
-    //return view('welcome');
-
+    
     /*
     \App\Post::create([
         'title'=>'test title',
         'content'=>'test content',
     ]);
     */
-
+    /*
     $post = new\App\Post();
     $post->title = 'test title1';
     $post->content = 'test content1';
     $post->save();
+    */
+    $posts = \App\Post::all();
+    dd($posts);
 
+    return view('welcome');
 });
