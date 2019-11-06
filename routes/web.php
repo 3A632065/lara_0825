@@ -53,10 +53,14 @@ Route::get('/', function () {
         'content'=>'updated content',
     ]);
     */
+    /*
     $post = \App\Post::find(2);
     $post->title='saved title';
     $post->content='saved content';
     $post->save();
+    */
+    $post=\App\Post::find(9);
+    $post->delete();
 
     return view('welcome');
 });
