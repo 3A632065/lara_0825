@@ -69,8 +69,14 @@ Route::get('/', function () {
     //\App\Post::destroy(7,10,14);
 
     //6-1 1.2 取得Conllection
+    /*
     $allPosts=\App\Post::all();
     dd($allPosts);
+    */
+    //6-1 3.4
+    $featuredPosts=\App\Post::where('is_feature',1)->get();
+    dd($featuredPosts);
+
 
 
 });
