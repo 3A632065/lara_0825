@@ -74,9 +74,14 @@ Route::get('/', function () {
     dd($allPosts);
     */
     //6-1 3.4
+    /*
     $featuredPosts=\App\Post::where('is_feature',1)->get();
     dd($featuredPosts);
+    */
 
+    //6-2 1.2 取得Model
+    $fourthPost=\App\Post::find(8);
+    dd($fourthPost);
 
 
 });
