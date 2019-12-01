@@ -80,8 +80,14 @@ Route::get('/', function () {
     */
 
     //6-2 1.2 取得Model
+    /*
     $fourthPost=\App\Post::find(8);
     dd($fourthPost);
+    */
+    //6-2 3.4
+    $lastPost=\App\Post::orderBy('id','DESC')->first();
+    dd($lastPost);
+
 
 
 });
