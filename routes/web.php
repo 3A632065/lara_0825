@@ -21,7 +21,7 @@ Route::get('contact', ['as' => 'posts.contact', 'uses' => 'PostsController@conta
 
 
 Route::get('/', function () {
-
+    //return view('welcome');
     /*
     \App\Post::create([
         'title'=>'test title',
@@ -66,7 +66,11 @@ Route::get('/', function () {
 
     //\App\Post::destroy(11);
 
-    \App\Post::destroy(7,10,14);
+    //\App\Post::destroy(7,10,14);
 
-    return view('welcome');
+    //6-1 1.2 取得Conllection
+    $allPosts=\App\Post::all();
+    dd($allPosts);
+
+
 });
