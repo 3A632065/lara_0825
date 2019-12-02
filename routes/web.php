@@ -85,9 +85,16 @@ Route::get('/', function () {
     dd($fourthPost);
     */
     //6-2 3.4
+    /*
     $lastPost=\App\Post::orderBy('id','DESC')->first();
     dd($lastPost);
+    */
 
+    //在comments資料表當中建立多筆測試資料並對應post_id 2-3筆 (範例)
+    $comment = new\App\Comment();
+    $comment->content = 'test content2';
+    $comment->post_id = '8';
+    $comment->save();
 
 
 });
