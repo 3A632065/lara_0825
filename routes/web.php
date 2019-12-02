@@ -91,10 +91,18 @@ Route::get('/', function () {
     */
 
     //在comments資料表當中建立多筆測試資料並對應post_id 2-3筆 (範例)
+    /*
     $comment = new\App\Comment();
     $comment->content = 'test content2';
     $comment->post_id = '8';
     $comment->save();
+    */
 
+    //測試
+    $post = \App\Post::find(2);
+    echo $post->id.'    '.$post->title.'<br><hr>';
+    foreach($post->comments as $comment) {
+        echo '*'.$comment->content.'<br>';
+    }
 
 });
